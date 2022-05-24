@@ -8,6 +8,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('/public/background.png')",
+        login: "url('/public/bg-login.jpg')",
       },
     },
   },
