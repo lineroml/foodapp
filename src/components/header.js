@@ -53,12 +53,13 @@ const Header = ({ user }) => {
 
             <button
               type='submit'
-              className='ml-2 w-40 flex-wrap flex h-8 aspect-square hover:bg-main-orange group bg-white transition-all duration-300 ease-in-out rounded-full'
+              className='ml-2 w-40 flex h-8 aspect-square hover:bg-main-orange group bg-white transition-all duration-300 ease-in-out rounded-full'
             >
-              <img src='/chef.png' alt='chef logo' className='w-6 aspect-auto mr-2' />
-              {user.account.name.first + ' ' + user.account.name.last}
-              <Link to={`/profile/${user.account._id}`}>
-                <i className='ml-2 fa-solid fa-pen fill-current group-hover:text-white text-main-orange transition-all duration-200 ease-in-out'></i>
+              <Link to={`/profile/${user.account._id}`} className='flex w-full'>
+                <img src='/chef.png' alt='chef logo' className='w-6 aspect-auto mr-2' />
+                <span className='truncate'>
+                  {user.account.name.first + ' ' + user.account.name.last}
+                </span>
               </Link>
             </button>
           </div>
